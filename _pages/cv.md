@@ -18,7 +18,7 @@ Awards & Fellowships
 ======
 * G. Forrest Wood Memorial Scholarship, UMD Biochemistry 2025  
 * Oral Presentation Award, NOBCChE 2025  
-* Goldhaber Travel Award, 2025  
+* Goldhaber Travel Award, UMD Graduate School 2025  
 * First runner-up, Department of Biochemistry graduating set 2021, LAUTECH  
 * ACS Fall 2025 (SEED Mentor Waiver)
 
@@ -33,12 +33,10 @@ Service and leadership
 Skills
 ======
 * Experimental
-  * Protein purification (affinity, ion-exchange, SEC)
-  * Enzyme kinetics & ATPase assays
-  * Differential scanning fluorimetry (DSF)
-  * SEC-MALS
+  * Protein purification (affinity, ion-exchange, SEC, SDS-PAGE)
+  * Enzyme kinetics 
+  * Protein Characterization (SEC-MALS, AUC, DSF)
   * Cryo-EM sample prep and data analysis
-  * Co-immunoprecipitation, ELISA
 * Computational
   * Molecular dynamics simulations (Anton, GROMACS, NAMD)
   * VMD TCL scripting & visualization
