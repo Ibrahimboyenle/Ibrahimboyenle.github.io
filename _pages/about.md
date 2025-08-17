@@ -20,11 +20,12 @@ I am particularly interested in:
 
 ---
 
-### Academic Highlights
-- 🏅 Outstanding Presentation Award, 2025  
+### Academic Highlights 
+- 🏅 ACS Fall 2025 (SEED Mentor Waiver)
 - 🏅 Oral Presentation Award, NOBCChE Conference 2025  
-- 🎓 G. Forrest Wood Fellowship  
-- 🎓 Goldhaber Travel Awar
+- 🏅 G. Forrest Wood Fellowship  
+- 🏅 Goldhaber Travel Award
+- 🎓 First runner-up, Department of Biochemistry graduating set 2021, LAUTECH
 
 ---
 
