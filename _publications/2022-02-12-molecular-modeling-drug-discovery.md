@@ -7,5 +7,5 @@ excerpt: "Review of molecular docking, molecular dynamics, and ADMET modeling in
 date: 2022-02-12
 venue: "Informatics in Medicine Unlocked"
 paperurl: "https://doi.org/10.1016/j.imu.2022.100807"
-citation: "Adelusi, T.I.; Oyedele, A.-Q.K.; **Boyenle, I.D.**; et al. (2022). Molecular Modeling in Drug Discovery. *Informatics in Medicine Unlocked*, 31, 100807."
+citation: "Adelusi, T.I.; Oyedele, A.-Q.K.; <b>Boyenle, I.D.</b>; et al. (2022). Molecular Modeling in Drug Discovery. <i>Informatics in Medicine Unlocked</i>, 31, 100807."
 ---
