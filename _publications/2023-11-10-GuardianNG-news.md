@@ -10,5 +10,5 @@ date: 2023-11-10
 redirect_to: "https://guardian.ng/news/boyenle-sheds-light-on-cellular-switch-between-life-and-death/"
 # Remove paperurl to hide the 'Download paper' button
 # paperurl: ""
-citation: "The Guardian Nigeria (2019). Boyenle sheds light on cellular switch between life and death."
+citation: "The Guardian Nigeria (2023). Boyenle sheds light on cellular switch between life and death."
 ---
