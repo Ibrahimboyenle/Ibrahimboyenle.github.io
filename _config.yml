@@ -23,12 +23,12 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
+  name             : "Ibrahim Boyenle"
+  pronouns         : "he/him"  
+  bio              : "PhD Candidate in Biochemistry"
+  location         : "USA"
+  employer         : "University of Maryland"
+  uri              : "https://ibrahimboyenle.github.io"   # or your future custom domain
   email            : "boyenleibrahim65@gmail.com" 
 
   # Academic websites
