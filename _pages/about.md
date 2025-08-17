@@ -11,7 +11,7 @@ Welcome!
 ========
 
 I am **Ibrahim D. Boyenle**, a Ph.D. candidate in Biochemistry at the **University of Maryland**.  
-My research focuses on understanding how co-chaperones regulate the conformational cycle of the **Hsp90 molecular chaperone**, combining **experimental biochemistry** with **molecular dynamics simulations**.
+My research focuses on understanding how co-chaperones regulate the conformational cycle of the **Hsp90 molecular chaperone**, combining **experimental biochemistry** **structural biology** & **molecular dynamics simulations**.
 
 I am particularly interested in:
 - The structural and functional roles of CS-containing co-chaperones.  
@@ -23,8 +23,8 @@ I am particularly interested in:
 ### Academic Highlights
 - 🏅 Outstanding Presentation Award, 2025  
 - 🏅 Oral Presentation Award, NOBCChE Conference 2025  
-- 🎓 G. Forrest Wood Fellowship ($10,000)  
-- 🎓 Goldhaber Travel Award ($250)
+- 🎓 G. Forrest Wood Fellowship  
+- 🎓 Goldhaber Travel Awar
 
 ---
 
@@ -33,5 +33,3 @@ I enjoy mentoring students, presenting at conferences such as ACS and NOBCChE, a
 When I’m not in the lab or running simulations, I’m usually exploring ideas for science communication and international collaboration.
 
 ---
-
-📄 You can view my [CV here](/files/CV.pdf).
