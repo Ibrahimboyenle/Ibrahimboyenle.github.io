@@ -1,10 +1,12 @@
 ---
 title: "Guardian Nigeria: Boyenle sheds light on cellular switch between life and death"
-venue: "The Guardian Nigeria"
+collection: publications
+category: media
+permalink: /publication/2023-11-10-GuardianNG-news.md
+excerpt: "Feature on my undergraduate research exploring the cellular switch between survival and death."
+venue: "IBBR News"
 year: 2023
 date: 2023-Nov-10
 paperurl: "https://guardian.ng/news/boyenle-sheds-light-on-cellular-switch-between-life-and-death/"
-category: media
+citation: "The Guardian Nigeria (2019). Boyenle sheds light on cellular switch between life and death."
 ---
-
-Feature on my undergraduate research exploring the cellular mechanisms that determine the switch between cell survival and cell death.
