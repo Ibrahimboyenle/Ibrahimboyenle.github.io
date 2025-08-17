@@ -11,35 +11,41 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Biochemistry, University of Maryland, 2027 (expected)
+* B.S. in Biochemistry, Ladoke Akintola University of Technology (LAUTECH), 2021
 
-Work experience
+Awards & Fellowships
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* G. Forrest Wood Memorial Scholarship, UMD Biochemistry 2025  
+* Oral Presentation Award, NOBCChE 2025  
+* Goldhaber Travel Award, 2025  
+* First runner-up, Department of Biochemistry graduating set 2021, LAUTECH  
+* ACS Fall 2025 (SEED Mentor Waiver)
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Service and leadership
+======
+* Vice President, NOBCChE (UMD Chapter), 2025/2026
+* ACS CSW Project SEED Summer Mentor, 2025
+* IBBR High School Internship Mentor, 2025
+* Director of Studies, Muslim Student Society of Nigeria (LAUTECH Chapter), 2020/2021
+* Member, UMD African Graduate Student Association
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Experimental
+  * Protein purification (affinity, ion-exchange, SEC)
+  * Enzyme kinetics & ATPase assays
+  * Differential scanning fluorimetry (DSF)
+  * SEC-MALS
+  * Cryo-EM sample prep and data analysis
+  * Co-immunoprecipitation, ELISA
+* Computational
+  * Molecular dynamics simulations (Anton, GROMACS, NAMD)
+  * VMD TCL scripting & visualization
+  * Python (pandas, matplotlib, numpy, ProDy) for data analysis
+  * Protein modeling & docking
+* General
+  * Scientific writing, mentoring, presentations
 
 Publications
 ======
@@ -59,6 +65,4 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
