@@ -1,4 +1,24 @@
 ---
+# Only front matter so Jekyll knows this is SCSS
+---
+
+@import "minimal-mistakes"; // import the base theme
+
+body {
+  font-size: 18px;       // increase base font size
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;      // improve readability
+}
+
+h1, h2, h3 {
+  font-family: "Georgia", serif;  // different font for headings
+  font-weight: 600;
+}
+
+.page__content {
+  max-width: 1000px;     // wider text block
+}
+---
 ---
 
 /*
