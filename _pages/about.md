@@ -10,7 +10,7 @@ redirect_from:
 Welcome!
 ========
 
-I am **Ibrahim D. Boyenle**, a Ph.D. candidate in Biochemistry at the **University of Maryland**.  
+I am **Ibrahim Boyenle**, a Ph.D. candidate in Biochemistry at the **University of Maryland** & the **Institute for Bioscience and Biotechnology Research (IBBR)**.  
 My research focuses on understanding how co-chaperones regulate the conformational cycle of the **Hsp90 molecular chaperone**, combining **experimental biochemistry** **structural biology** & **molecular dynamics simulations**.
 
 I am particularly interested in:
@@ -21,16 +21,15 @@ I am particularly interested in:
 ---
 
 ### Academic Highlights 
-- 🏅 ACS Fall 2025 (SEED Mentor Waiver)
-- 🏅 Oral Presentation Award, NOBCChE Conference 2025  
-- 🏅 G. Forrest Wood Fellowship  
-- 🏅 Goldhaber Travel Award
+- 🏅 Oral Presentation Award, NOBCChE NE/SE Conference, 2025  
+- 🏅 G. Forrest Wood Fellowship, Department of Biochemistry, University of Maryland, 2025  
+- 🏅 Goldhaber Travel Award, Department of Biochemistry, University of Maryland, 2025
 - 🎓 First runner-up, Department of Biochemistry graduating set 2021, LAUTECH
 
 ---
 
 ### Beyond Research
 I enjoy mentoring students, presenting at conferences such as ACS and NOBCChE, and writing about science for both academic and public audiences.  
-When I’m not in the lab or running simulations, I’m usually exploring ideas for science communication and international collaboration.
+When I’m not in the lab or running simulations, you’ll often find me outdoors in nature.
 
 ---
