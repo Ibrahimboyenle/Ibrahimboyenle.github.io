@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Ibrahim Boyenle"
 title_separator          : "-"
 name                     : &name "Your Name"
-description              : &description "PhD Candidate in Biochemistry, University of Maryland"
+description              : &description "PhD Candidate in Biochemistry, University of Maryland & Institute for Bioscience and Biotechnology Research (IBBR)"
 url                      : "https://ibrahimboyenle.github.io"  # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Ibrahimboyenle/Ibrahimboyenle.github.io"
@@ -28,6 +28,7 @@ author:
   bio              : "PhD Candidate in Biochemistry"
   location         : "USA"
   employer         : "University of Maryland"
+  employer         : "Institute for Bioscience and Biotechnology Research (IBBR)"
   uri              : "https://ibrahimboyenle.github.io"   # or your future custom domain
   email            : "boyenleibrahim65@gmail.com" 
 
