@@ -2,20 +2,20 @@
 # Only front matter so Jekyll knows this is SCSS
 ---
 
-/* === THEME IMPORTS (keep these at the top) === */
-@import "minimal-mistakes"; // or keep the academicpages import bundle if you prefer
-
-/* If you need the academicpages bundle instead of the single line above,
-   replace the previous line with this block:
+/* === AcademicPages SCSS bundle (local partials) === */
 @import
   "vendor/breakpoint/breakpoint",
+
   "themes",
   "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
   "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
   "include/mixins",
   "vendor/susy/susy",
+
   "layout/reset",
   "layout/base",
+
   "include/utilities",
   "layout/tables",
   "layout/buttons",
@@ -24,51 +24,43 @@
   "layout/navigation",
   "layout/footer",
   "syntax",
+
   "layout/forms",
+
   "layout/page",
   "layout/archive",
   "layout/sidebar",
   "layout/json_cv",
+
   "vendor/font-awesome/fontawesome",
   "vendor/font-awesome/solid",
   "vendor/font-awesome/brands";
-*/
 
-/* === YOUR OVERRIDES (put all custom styles AFTER imports) === */
+/* === Your overrides (AFTER imports) === */
 body {
-  font-size: 18px;                // increase base font size
+  font-size: 18px;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;               // improve readability
+  line-height: 1.7;
 }
 
 h1, h2, h3 {
-  font-family: "Georgia", serif;  // heading font
+  font-family: "Georgia", serif;
   font-weight: 600;
 }
 
-/* widen main content column */
-.page__content {
-  max-width: 1000px;
-}
-
-/* optional: tweak homepage/archive widths, too */
+.page__content { max-width: 1000px; }
 .archive,
-.initial-content {
-  max-width: 1000px;
-}
+.initial-content { max-width: 1000px; }
 
-/* optional: make images slightly rounded with a soft shadow */
 .page__content img {
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-/* optional: scale headings a touch */
 h1 { font-size: 2.1rem; }
 h2 { font-size: 1.6rem; }
 h3 { font-size: 1.3rem; }
 
-/* mobile adjustments */
 @media (max-width: 640px) {
   .page__content,
   .archive,
