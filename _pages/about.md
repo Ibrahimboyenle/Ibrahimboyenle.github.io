@@ -34,8 +34,6 @@ When I’m not in the lab or running simulations, you’ll often find me outdoor
 
 ---
 
----
-
 ## Recent Posts
 
 {% for post in site.posts limit:3 %}
