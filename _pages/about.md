@@ -34,25 +34,25 @@ When I’m not in the lab or running simulations, you’ll often find me outdoor
 
 ---
 
-## Recent Posts
+## Recent Talks
 
-{% for post in site.posts limit:3 %}
+{% for talk in site.talks limit:3 %}
 <article class="archive__item" style="margin-bottom:1.25rem;">
   <h3 class="archive__item-title">
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a href="{{ talk.url | relative_url }}">{{ talk.title }}</a>
   </h3>
 
-  {% if post.excerpt %}
+  {% if talk.excerpt %}
     <div class="archive__item-excerpt">
-      {{ post.excerpt | markdownify }}
+      {{ talk.excerpt | markdownify }}
     </div>
   {% endif %}
 
   <p class="page__meta" style="margin:.25rem 0 0 0;">
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    <time datetime="{{ talk.date | date_to_xmlschema }}">{{ talk.date | date: "%b %-d, %Y" }}</time>
   </p>
 </article>
 <hr/>
 {% endfor %}
 
-<p><a class="btn btn--primary" href="{{ '/year-archive/' | relative_url }}">View all posts →</a></p>
+<p><a class="btn btn--primary" href="{{ '/talks/' | relative_url }}">View all talks →</a></p>
