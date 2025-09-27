@@ -36,7 +36,8 @@ When I’m not in the lab or running simulations, you’ll often find me outdoor
 
 ## Recent Talks
 
-{% for talk in site.talks limit:3 %}
+{% assign sorted_talks = site.talks | sort: "date" | reverse %}
+{% for talk in sorted_talks limit:2 %}
 <article class="archive__item" style="margin-bottom:1.25rem;">
   <h3 class="archive__item-title">
     <a href="{{ talk.url | relative_url }}">{{ talk.title }}</a>
