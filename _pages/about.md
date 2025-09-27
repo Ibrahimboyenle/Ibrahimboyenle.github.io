@@ -33,3 +33,28 @@ I enjoy mentoring students, presenting at conferences such as ACS and NOBCChE, a
 When I’m not in the lab or running simulations, you’ll often find me outdoors in nature.
 
 ---
+
+---
+
+## Recent Posts
+
+{% for post in site.posts limit:3 %}
+<article class="archive__item" style="margin-bottom:1.25rem;">
+  <h3 class="archive__item-title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h3>
+
+  {% if post.excerpt %}
+    <div class="archive__item-excerpt">
+      {{ post.excerpt | markdownify }}
+    </div>
+  {% endif %}
+
+  <p class="page__meta" style="margin:.25rem 0 0 0;">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+  </p>
+</article>
+<hr/>
+{% endfor %}
+
+<p><a class="btn btn--primary" href="{{ '/year-archive/' | relative_url }}">View all posts →</a></p>
