@@ -29,6 +29,79 @@ I am particularly interested in:
 
 
 ---
+## Featured Research
+
+<div class="featured-publications">
+
+  <!-- First Publication -->
+  <div class="pub-card">
+    <a href="https://www.mdpi.com/2409-9279/8/5/103" target="_blank">
+      <img src="/images/publications/htpg-2025-fig.png" alt="HtpG study figure">
+    </a>
+    <div class="pub-info">
+      <h3>
+        <a href="https://www.mdpi.com/2409-9279/8/5/103" target="_blank">
+          Biochemical characterization of cyanobacterial HtpG from <i>Synechococcus elongatus</i> PCC 7942
+        </a>
+      </h3>
+      <p><em>Methods & Protocols</em>, 2025</p>
+      <p>First biochemical study of the cyanobacterial HtpG homolog, a heat-shock protein from <i>Synechococcus elongatus</i>.</p>
+    </div>
+  </div>
+
+  <!-- Second Publication -->
+  <div class="pub-card">
+    <a href="https://doi.org/10.1016/j.mito.2022.01.006" target="_blank">
+      <img src="/images/publications/mptp-review-fig.png" alt="mPTP review figure">
+    </a>
+    <div class="pub-info">
+      <h3>
+        <a href="https://doi.org/10.1016/j.mito.2022.01.006" target="_blank">
+          Targeting the mitochondrial permeability transition pore for drug discovery: Challenges and opportunities
+        </a>
+      </h3>
+      <p><em>Mitochondrion</em>, 2022</p>
+      <p>Review of mPTP models, regulators, and drug-discovery challenges.</p>
+    </div>
+  </div>
+
+</div>
+
+<p style="margin-top:1.5rem;">
+  <a class="btn btn--primary" href="/publications/">See more → Publications</a>
+</p>
+
+<!-- Optional CSS for cleaner cards -->
+<style>
+.featured-publications {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.pub-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  overflow: hidden;
+}
+.pub-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.pub-info {
+  padding: 1rem;
+}
+.pub-info h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.pub-info p {
+  margin: 0.3rem 0;
+}
+</style>
+
+---
 
 ## Recent Talks
 
