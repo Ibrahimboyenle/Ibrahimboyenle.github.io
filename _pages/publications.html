@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: archive            # keeps your site header/sidebar/menu
 title: "Publications"
 permalink: /publications/
 author_profile: true
@@ -7,67 +7,58 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="page">
-  <h1>Publications</h1>
+{% if site.author.googlescholar %}
+<p class="wordwrap">
+  You can also find my articles on
+  <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">my Google Scholar profile</a>.
+</p>
+{% endif %}
 
-  {% if site.author.googlescholar %}
-    <p class="wordwrap">
-      You can also find my articles on
-      <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">my Google Scholar profile</a>.
-    </p>
-  {% endif %}
+<!-- Year-grouped compact list -->
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% assign last_year = "" %}
 
-  {% comment %}
-    If you defined publication_category in _config.yml (e.g., manuscripts, conferences),
-    we’ll group bullets by those headings; otherwise we show one flat list.
-  {% endcomment %}
+{% for pub in pubs %}
+  {% assign item_year = pub.year | default: pub.date | date: "%Y" %}
 
-  {% if site.publication_category %}
-    {% for category in site.publication_category %}
-      {% assign title_shown = false %}
-      {% assign pubs = site.publications | sort: "date" | reverse %}
-      {% for pub in pubs %}
-        {% if pub.category != category[0] %}{% continue %}{% endif %}
-        {% unless title_shown %}
-          <h2>{{ category[1].title }}</h2>
-          <ul class="pubs-list">
-          {% assign title_shown = true %}
-        {% endunless %}
-
-        {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
-        <li>
-          {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
-          {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
-          {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
-          {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
-        </li>
-
-        {% comment %}
-          Close the UL when the loop ends or the next item is a different category.
-        {% endcomment %}
-        {% if forloop.last %}
-          {% if title_shown %}</ul>{% endif %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  {% else %}
+  {% if item_year != last_year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h2 class="pub-year">{{ item_year }}</h2>
     <ul class="pubs-list">
-    {% assign pubs = site.publications | sort: "date" | reverse %}
-    {% for pub in pubs %}
-      {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
-      <li>
-        {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
-        {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
-        {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
-        {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
-      </li>
-    {% endfor %}
-    </ul>
+    {% assign last_year = item_year %}
   {% endif %}
-</div>
+
+  <li>
+    {% if pub.category == "media" %}
+      {% comment %} Media coverage: underline the title and make it clickable {% endcomment %}
+      {% if pub.paperurl %}
+        <a href="{{ pub.paperurl }}" target="_blank" rel="noopener" class="media-link"><u>{{ pub.title }}</u></a>
+      {% else %}
+        <span class="media-link"><u>{{ pub.title }}</u></span>
+      {% endif %}
+      {% if pub.venue %} <em> — {{ pub.venue }}</em>{% endif %}
+      {% if pub.date %} <span> ({{ pub.date | date: "%b %-d, %Y" }})</span>{% endif %}
+    {% else %}
+      {% comment %} Regular papers: show your citation + Web/PDF/BibTeX links {% endcomment %}
+      {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
+      {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
+      {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
+      {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
+    {% endif %}
+  </li>
+
+  {% if forloop.last %}</ul>{% endif %}
+{% endfor %}
 
 <style>
-  /* Tighten the list a bit for a compact look */
+  /* Compact spacing */
   .pubs-list { margin-left: 1.1rem; }
   .pubs-list li { margin: .35rem 0; }
+
+  /* Year heading style (optional) */
+  .pub-year { margin-top: 1.5rem; margin-bottom: .5rem; }
+
+  /* Media coverage links: ensure underline even if global CSS changes */
+  .media-link { text-underline-offset: 2px; }
 </style>
