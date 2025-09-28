@@ -41,11 +41,13 @@ body {
   font-size: 14px;
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.7;
+  color: #000000; // pure black text
 }
 
 h1, h2, h3 {
   font-family: "Merriweather", serif;
   font-weight: 600;
+  color: #000000; // pure black headings
 }
 
 .page__content { max-width: 1000px; }
@@ -71,20 +73,18 @@ h3 { font-size: 1.3rem; }
   }
   body { font-size: 14px; }
 }
-/* === Force text color to pure black === */
-body {
-  color: #000000;  // pure black text
-}
 
-h1, h2, h3, h4, h5, h6 {
-  color: #000000;  // make all headings pure black
-}
-
+/* === Links === */
 a {
-  color: #000000;  
-  text-decoration: underline; // makes them visibly links
+  color: #003366;             // deep navy blue
+  text-decoration: underline; // underline to signal clickable
 }
 
 a:hover {
-  color: #0056b3; // dark blue on hover
+  color: #0056b3;             // brighter deep blue
+  font-weight: 600;           // optional bold on hover
+}
+
+a:visited {
+  color: #4B0082;             // indigo for visited links
 }
