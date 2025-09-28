@@ -14,107 +14,103 @@ author_profile: true
 </p>
 {% endif %}
 
-{%- comment -%}
-UTIL: get display title for a category.
-If present in _config.yml: publication_category, use that title; else titleize the key.
-{%- endcomment -%}
-{% assign cat_titles = site.publication_category %}
-{% assign get_title = "" %}
+{%- assign catmap = site.publication_category -%}
 
 {%- comment -%}
-=== JOURNAL ARTICLES (manuscripts) — grouped by year (newest -> oldest) ===
+Helper: resolve a robust year for each item:
+1) From filename prefix (YYYY-...) in _publications
+2) Else from pub.date
+3) Else from pub.year
 {%- endcomment -%}
-{% assign manuscripts = site.publications | where: "category", "manuscripts" | sort: "date" | reverse %}
-{% if manuscripts.size > 0 %}
-  {% assign title = "Journal Articles" %}
-  {% if cat_titles and cat_titles.manuscripts and cat_titles.manuscripts.title %}
-    {% assign title = cat_titles.manuscripts.title %}
-  {% endif %}
-  <h2>{{ title }}</h2>
+{%- assign pubs_all = site.publications -%}
 
-  {% assign last_year = "" %}
-  {% for pub in manuscripts %}
-    {%- comment -%}
-    Derive a robust year:
-    1) pub.year if provided
-    2) pub.date (front matter) if present
-    3) filename prefix YYYY-… if used
-    {%- endcomment -%}
-    {% assign y = pub.year | to_s %}
-    {% if y == "" or y == "0" or y == "1970" %}
-      {% if pub.date %}
-        {% assign y = pub.date | date: "%Y" %}
-      {% else %}
-        {% assign filename = pub.name | default: pub.path | split: '/' | last %}
-        {% assign y = filename | slice: 0, 4 %}
-      {% endif %}
-    {% endif %}
+{%- if catmap -%}
+  {%- for cat in catmap -%}
+    {%- assign cat_key = cat[0] -%}
+    {%- assign cat_title = cat[1].title | default: cat_key | capitalize -%}
+    {%- assign items = pubs_all | where: "category", cat_key -%}
+    {%- if items.size > 0 -%}
+      <h2>{{ cat_title }}</h2>
 
-    {% if y != last_year %}
-      {% unless forloop.first %}</ul>{% endunless %}
-      <h3 class="pub-year">{{ y }}</h3>
-      <ul class="pubs-list">
-      {% assign last_year = y %}
-    {% endif %}
+      {%- if cat_key == "manuscripts" -%}
+        {%- assign items_sorted = items | sort: "date" | reverse -%}
+        {%- assign last_year = "" -%}
+        {%- for pub in items_sorted -%}
+          {%- assign y = "" -%}
+          {%- assign fname = pub.path | split:'/' | last -%}
+          {%- assign first_char = fname | slice: 0, 1 -%}
+          {%- if first_char == "1" or first_char == "2" -%}
+            {%- assign y = fname | slice: 0, 4 -%}
+          {%- endif -%}
+          {%- if y == "" and pub.date -%}{%- assign y = pub.date | date: "%Y" -%}{%- endif -%}
+          {%- if y == "" and pub.year -%}{%- assign y = pub.year -%}{%- endif -%}
+          {%- if y == "" -%}{%- assign y = "Unknown" -%}{%- endif -%}
 
-    {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
+          {%- if y != last_year -%}
+            {%- unless forloop.first -%}</ul>{%- endunless -%}
+            <h3 class="pub-year">{{ y }}</h3>
+            <ul class="pubs-list">
+            {%- assign last_year = y -%}
+          {%- endif -%}
+
+          {%- capture citation_html -%}{{ pub.citation | markdownify | strip }}{%- endcapture -%}
+          <li>
+            {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
+            {%- if pub.paperurl -%} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{%- endif -%}
+            {%- if pub.pdfurl -%} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{%- endif -%}
+            {%- if pub.bibtexurl -%} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{%- endif -%}
+          </li>
+
+          {%- if forloop.last -%}</ul>{%- endif -%}
+        {%- endfor -%}
+
+      {%- elsif cat_key == "media" -%}
+        {%- assign items_sorted = items | sort: "date" | reverse -%}
+        <ul class="pubs-list">
+        {%- for pub in items_sorted -%}
+          {%- assign ext = pub.paperurl -%}
+          {%- if ext == nil or ext == "" -%}{%- assign ext = pub.url | relative_url -%}{%- endif -%}
+          <li>
+            <a href="{{ ext }}" target="_blank" rel="noopener" class="media-link"><u>{{ pub.title }}</u></a>
+            {%- if pub.venue %} <em> — {{ pub.venue }}</em>{% endif -%}
+            {%- if pub.date %} <span> ({{ pub.date | date: "%b %-d, %Y" }})</span>{% endif -%}
+          </li>
+        {%- endfor -%}
+        </ul>
+
+      {%- else -%}
+        {%- assign items_sorted = items | sort: "date" | reverse -%}
+        <ul class="pubs-list">
+        {%- for pub in items_sorted -%}
+          {%- capture citation_html -%}{{ pub.citation | markdownify | strip }}{%- endcapture -%}
+          <li>
+            {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
+            {%- if pub.paperurl -%} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{%- endif -%}
+            {%- if pub.pdfurl -%} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{%- endif -%}
+            {%- if pub.bibtexurl -%} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{%- endif -%}
+          </li>
+        {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- comment -%} Fallback if publication_category isn't defined {%- endcomment -%}
+  <ul class="pubs-list">
+  {%- assign items_sorted = pubs_all | sort: "date" | reverse -%}
+  {%- for pub in items_sorted -%}
+    {%- capture citation_html -%}{{ pub.citation | markdownify | strip }}{%- endcapture -%}
     <li>
       {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
-      {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
-      {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
-      {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
+      {%- if pub.paperurl -%} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{%- endif -%}
     </li>
-
-    {% if forloop.last %}</ul>{% endif %}
-  {% endfor %}
-{% endif %}
-
-{%- comment -%}
-=== MEDIA COVERAGE (media) — clickable underlined titles ===
-{%- endcomment -%}
-{% assign media = site.publications | where: "category", "media" | sort: "date" | reverse %}
-{% if media.size > 0 %}
-  <h2>Media Coverage</h2>
-  <ul class="pubs-list">
-  {% for pub in media %}
-    <li>
-      {% if pub.paperurl %}
-        <a href="{{ pub.paperurl }}" target="_blank" rel="noopener"><u>{{ pub.title }}</u></a>
-      {% else %}
-        <span><u>{{ pub.title }}</u></span>
-      {% endif %}
-      {% if pub.venue %} <em> — {{ pub.venue }}</em>{% endif %}
-      {% if pub.date %} <span> ({{ pub.date | date: "%b %-d, %Y" }})</span>{% endif %}
-    </li>
-  {% endfor %}
+  {%- endfor -%}
   </ul>
-{% endif %}
-
-{%- comment -%}
-=== CONFERENCE PAPERS (conferences) — compact bullets ===
-{%- endcomment -%}
-{% assign conferences = site.publications | where: "category", "conferences" | sort: "date" | reverse %}
-{% if conferences.size > 0 %}
-  {% assign conf_title = "Conference Papers" %}
-  {% if cat_titles and cat_titles.conferences and cat_titles.conferences.title %}
-    {% assign conf_title = cat_titles.conferences.title %}
-  {% endif %}
-  <h2>{{ conf_title }}</h2>
-  <ul class="pubs-list">
-  {% for pub in conferences %}
-    {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
-    <li>
-      {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
-      {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
-      {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
-      {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
-    </li>
-  {% endfor %}
-  </ul>
-{% endif %}
+{%- endif -%}
 
 <style>
   .pubs-list { margin-left: 1.15rem; }
   .pubs-list li { margin: .35rem 0; }
   .pub-year { margin-top: 1.25rem; margin-bottom: .35rem; }
+  .media-link { text-underline-offset: 2px; }
 </style>
