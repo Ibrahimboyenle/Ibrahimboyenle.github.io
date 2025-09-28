@@ -1,36 +1,73 @@
 ---
-layout: archive
+layout: none
 title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<div class="page">
+  <h1>Publications</h1>
+
+  {% if site.author.googlescholar %}
+    <p class="wordwrap">
+      You can also find my articles on
+      <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">my Google Scholar profile</a>.
+    </p>
+  {% endif %}
+
+  {% comment %}
+    If you defined publication_category in _config.yml (e.g., manuscripts, conferences),
+    we’ll group bullets by those headings; otherwise we show one flat list.
+  {% endcomment %}
+
+  {% if site.publication_category %}
+    {% for category in site.publication_category %}
+      {% assign title_shown = false %}
+      {% assign pubs = site.publications | sort: "date" | reverse %}
+      {% for pub in pubs %}
+        {% if pub.category != category[0] %}{% continue %}{% endif %}
+        {% unless title_shown %}
+          <h2>{{ category[1].title }}</h2>
+          <ul class="pubs-list">
+          {% assign title_shown = true %}
+        {% endunless %}
+
+        {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
+        <li>
+          {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
+          {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
+          {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
+          {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
+        </li>
+
+        {% comment %}
+          Close the UL when the loop ends or the next item is a different category.
+        {% endcomment %}
+        {% if forloop.last %}
+          {% if title_shown %}</ul>{% endif %}
+        {% endif %}
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  {% else %}
+    <ul class="pubs-list">
+    {% assign pubs = site.publications | sort: "date" | reverse %}
+    {% for pub in pubs %}
+      {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
+      <li>
+        {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
+        {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
+        {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
+        {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</div>
 
-
-
+<style>
+  /* Tighten the list a bit for a compact look */
+  .pubs-list { margin-left: 1.1rem; }
+  .pubs-list li { margin: .35rem 0; }
+</style>
