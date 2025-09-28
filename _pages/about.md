@@ -10,9 +10,8 @@ redirect_from:
 Welcome!
 ========
 
-I am **Ibrahim Boyenle**, a Ph.D. candidate in Biochemistry at the [**University of Maryland, Department of Chemistry & Biochemistry**](https://chem.umd.edu) & the [**Institute for Bioscience and Biotechnology Research (IBBR)**](https://www.ibbr.umd.edu/).  
+I am **Ibrahim Boyenle**, a Ph.D. candidate in Biochemistry at the [**University of Maryland, Department of Chemistry & Biochemistry**](https://chem.umd.edu){:target="_blank" rel="noopener"} & the [**Institute for Bioscience and Biotechnology Research (IBBR)**](https://www.ibbr.umd.edu/){:target="_blank" rel="noopener"}.  
 My research focuses on understanding how co-chaperones regulate the conformational cycle of the **Hsp90 molecular chaperone**, combining **experimental biochemistry**, **structural biology**, & **molecular dynamics simulations**.
-
 
 I am particularly interested in:
 - The structural and functional roles of CS-containing co-chaperones.  
@@ -27,36 +26,36 @@ I am particularly interested in:
 - 🏅 Goldhaber Travel Award, Department of Biochemistry, University of Maryland, 2025
 - 🎓 First runner-up, Department of Biochemistry graduating set 2021, LAUTECH
 
-
 ---
+
 ## Featured Research
 
 <div class="featured-publications">
 
   <!-- First Publication -->
   <div class="pub-card">
-    <a href="https://www.mdpi.com/2409-9279/8/5/103" target="_blank">
-      <img src="/images/publications/htpg-2025-fig.png" alt="HtpG study figure">
+    <a href="https://www.mdpi.com/2409-9279/8/5/103" target="_blank" rel="noopener">
+      <img src="/images/publications/htpg-2025-fig.png" alt="HtpG study figure" loading="lazy">
     </a>
     <div class="pub-info">
       <h3>
-        <a href="https://www.mdpi.com/2409-9279/8/5/103" target="_blank">
+        <a href="https://www.mdpi.com/2409-9279/8/5/103" target="_blank" rel="noopener">
           Biochemical characterization of cyanobacterial HtpG from <i>Synechococcus elongatus</i> PCC 7942
         </a>
       </h3>
-      <p><em>Methods & Protocols</em>, 2025</p>
+      <p><em>Methods &amp; Protocols</em>, 2025</p>
       <p>First biochemical study of the cyanobacterial HtpG homolog, a heat-shock protein from <i>Synechococcus elongatus</i>.</p>
     </div>
   </div>
 
   <!-- Second Publication -->
   <div class="pub-card">
-    <a href="https://doi.org/10.1016/j.mito.2022.01.006" target="_blank">
-      <img src="/images/publications/mptp-review-fig.png" alt="mPTP review figure">
+    <a href="https://doi.org/10.1016/j.mito.2022.01.006" target="_blank" rel="noopener">
+      <img src="/images/publications/mptp-review-fig.png" alt="mPTP review figure" loading="lazy">
     </a>
     <div class="pub-info">
       <h3>
-        <a href="https://doi.org/10.1016/j.mito.2022.01.006" target="_blank">
+        <a href="https://doi.org/10.1016/j.mito.2022.01.006" target="_blank" rel="noopener">
           Targeting the mitochondrial permeability transition pore for drug discovery: Challenges and opportunities
         </a>
       </h3>
@@ -68,7 +67,7 @@ I am particularly interested in:
 </div>
 
 <p style="margin-top:1.5rem;">
-  <a class="btn btn--primary" href="/publications/">See more → Publications</a>
+  <a class="btn btn--primary" href="{{ '/publications/' | relative_url }}">See more → Publications</a>
 </p>
 
 <!-- Optional CSS for cleaner cards -->
@@ -89,16 +88,9 @@ I am particularly interested in:
   height: 180px;
   object-fit: cover;
 }
-.pub-info {
-  padding: 1rem;
-}
-.pub-info h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-}
-.pub-info p {
-  margin: 0.3rem 0;
-}
+.pub-info { padding: 1rem; }
+.pub-info h3 { margin-top: 0; font-size: 1.1rem; }
+.pub-info p { margin: 0.3rem 0; }
 </style>
 
 ---
