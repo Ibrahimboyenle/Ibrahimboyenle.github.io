@@ -38,13 +38,13 @@
 
 /* === Your overrides (AFTER imports) === */
 body {
-  font-size: 18px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-family: "Roboto", Arial, sans-serif;
   line-height: 1.7;
 }
 
 h1, h2, h3 {
-  font-family: "Georgia", serif;
+  font-family: "Merriweather", serif;
   font-weight: 600;
 }
 
@@ -69,5 +69,22 @@ h3 { font-size: 1.3rem; }
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  body { font-size: 17px; }
+  body { font-size: 14px; }
+}
+/* === Force text color to pure black === */
+body {
+  color: #000000;  // pure black text
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;  // make all headings pure black
+}
+
+a {
+  color: #000000;  
+  text-decoration: underline; // makes them visibly links
+}
+
+a:hover {
+  color: #0056b3; // dark blue on hover
 }
