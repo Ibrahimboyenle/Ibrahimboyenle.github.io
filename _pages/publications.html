@@ -1,5 +1,5 @@
 ---
-layout: archive            # keeps your site header/sidebar/menu
+layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
@@ -14,51 +14,107 @@ author_profile: true
 </p>
 {% endif %}
 
-<!-- Year-grouped compact list -->
-{% assign pubs = site.publications | sort: "date" | reverse %}
-{% assign last_year = "" %}
+{%- comment -%}
+UTIL: get display title for a category.
+If present in _config.yml: publication_category, use that title; else titleize the key.
+{%- endcomment -%}
+{% assign cat_titles = site.publication_category %}
+{% assign get_title = "" %}
 
-{% for pub in pubs %}
-  {% assign item_year = pub.year | default: pub.date | date: "%Y" %}
-
-  {% if item_year != last_year %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h2 class="pub-year">{{ item_year }}</h2>
-    <ul class="pubs-list">
-    {% assign last_year = item_year %}
+{%- comment -%}
+=== JOURNAL ARTICLES (manuscripts) — grouped by year (newest -> oldest) ===
+{%- endcomment -%}
+{% assign manuscripts = site.publications | where: "category", "manuscripts" | sort: "date" | reverse %}
+{% if manuscripts.size > 0 %}
+  {% assign title = "Journal Articles" %}
+  {% if cat_titles and cat_titles.manuscripts and cat_titles.manuscripts.title %}
+    {% assign title = cat_titles.manuscripts.title %}
   {% endif %}
+  <h2>{{ title }}</h2>
 
-  <li>
-    {% if pub.category == "media" %}
-      {% comment %} Media coverage: underline the title and make it clickable {% endcomment %}
-      {% if pub.paperurl %}
-        <a href="{{ pub.paperurl }}" target="_blank" rel="noopener" class="media-link"><u>{{ pub.title }}</u></a>
+  {% assign last_year = "" %}
+  {% for pub in manuscripts %}
+    {%- comment -%}
+    Derive a robust year:
+    1) pub.year if provided
+    2) pub.date (front matter) if present
+    3) filename prefix YYYY-… if used
+    {%- endcomment -%}
+    {% assign y = pub.year | to_s %}
+    {% if y == "" or y == "0" or y == "1970" %}
+      {% if pub.date %}
+        {% assign y = pub.date | date: "%Y" %}
       {% else %}
-        <span class="media-link"><u>{{ pub.title }}</u></span>
+        {% assign filename = pub.name | default: pub.path | split: '/' | last %}
+        {% assign y = filename | slice: 0, 4 %}
       {% endif %}
-      {% if pub.venue %} <em> — {{ pub.venue }}</em>{% endif %}
-      {% if pub.date %} <span> ({{ pub.date | date: "%b %-d, %Y" }})</span>{% endif %}
-    {% else %}
-      {% comment %} Regular papers: show your citation + Web/PDF/BibTeX links {% endcomment %}
-      {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
+    {% endif %}
+
+    {% if y != last_year %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h3 class="pub-year">{{ y }}</h3>
+      <ul class="pubs-list">
+      {% assign last_year = y %}
+    {% endif %}
+
+    {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
+    <li>
       {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
       {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
       {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
       {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
-    {% endif %}
-  </li>
+    </li>
 
-  {% if forloop.last %}</ul>{% endif %}
-{% endfor %}
+    {% if forloop.last %}</ul>{% endif %}
+  {% endfor %}
+{% endif %}
+
+{%- comment -%}
+=== MEDIA COVERAGE (media) — clickable underlined titles ===
+{%- endcomment -%}
+{% assign media = site.publications | where: "category", "media" | sort: "date" | reverse %}
+{% if media.size > 0 %}
+  <h2>Media Coverage</h2>
+  <ul class="pubs-list">
+  {% for pub in media %}
+    <li>
+      {% if pub.paperurl %}
+        <a href="{{ pub.paperurl }}" target="_blank" rel="noopener"><u>{{ pub.title }}</u></a>
+      {% else %}
+        <span><u>{{ pub.title }}</u></span>
+      {% endif %}
+      {% if pub.venue %} <em> — {{ pub.venue }}</em>{% endif %}
+      {% if pub.date %} <span> ({{ pub.date | date: "%b %-d, %Y" }})</span>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{%- comment -%}
+=== CONFERENCE PAPERS (conferences) — compact bullets ===
+{%- endcomment -%}
+{% assign conferences = site.publications | where: "category", "conferences" | sort: "date" | reverse %}
+{% if conferences.size > 0 %}
+  {% assign conf_title = "Conference Papers" %}
+  {% if cat_titles and cat_titles.conferences and cat_titles.conferences.title %}
+    {% assign conf_title = cat_titles.conferences.title %}
+  {% endif %}
+  <h2>{{ conf_title }}</h2>
+  <ul class="pubs-list">
+  {% for pub in conferences %}
+    {% capture citation_html %}{{ pub.citation | markdownify | strip }}{% endcapture %}
+    <li>
+      {{ citation_html | replace: '<p>', '' | replace: '</p>', '' }}
+      {% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank" rel="noopener">[Web]</a>{% endif %}
+      {% if pub.pdfurl %} <a href="{{ pub.pdfurl | relative_url }}" target="_blank" rel="noopener">[PDF]</a>{% endif %}
+      {% if pub.bibtexurl %} <a href="{{ pub.bibtexurl }}" target="_blank" rel="noopener">[BibTeX]</a>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
 
 <style>
-  /* Compact spacing */
-  .pubs-list { margin-left: 1.1rem; }
+  .pubs-list { margin-left: 1.15rem; }
   .pubs-list li { margin: .35rem 0; }
-
-  /* Year heading style (optional) */
-  .pub-year { margin-top: 1.5rem; margin-bottom: .5rem; }
-
-  /* Media coverage links: ensure underline even if global CSS changes */
-  .media-link { text-underline-offset: 2px; }
+  .pub-year { margin-top: 1.25rem; margin-bottom: .35rem; }
 </style>
