@@ -36,33 +36,40 @@
   "vendor/font-awesome/solid",
   "vendor/font-awesome/brands";
 
+/* === Root sizing: make 1rem = 14px === */
+html { font-size: 14px; }
+
 /* === Your overrides (AFTER imports) === */
 body {
-  font-size: 14px;
+  font-size: 1rem;                 /* 14px */
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.7;
-  color: #000000; // pure black text
+  color: #000000;                   /* pure black text */
 }
 
 h1, h2, h3 {
   font-family: "Merriweather", serif;
   font-weight: 600;
-  color: #000000; // pure black headings
+  color: #000000;                   /* pure black headings */
 }
 
+/* Content width */
 .page__content { max-width: 1000px; }
 .archive,
 .initial-content { max-width: 1000px; }
 
+/* Images */
 .page__content img {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-h1 { font-size: 2.1rem; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.3rem; }
+/* Heading sizes (now based on 14px root) */
+h1 { font-size: 2.1rem; }  /* ≈ 29.4px */
+h2 { font-size: 1.6rem; }  /* ≈ 22.4px */
+h3 { font-size: 1.3rem; }  /* ≈ 18.2px */
 
+/* Mobile tweaks */
 @media (max-width: 640px) {
   .page__content,
   .archive,
@@ -71,20 +78,17 @@ h3 { font-size: 1.3rem; }
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  body { font-size: 14px; }
+  /* Keep base size consistent on mobile (optional bump to 15px: set to 1.071rem) */
+  body { font-size: 1rem; } /* 14px */
 }
 
 /* === Links === */
 a {
-  color: #003366;             // deep navy blue
-  text-decoration: underline; // underline to signal clickable
+  color: #003366;              /* deep navy blue */
+  text-decoration: underline;  /* underline to signal clickable */
 }
-
 a:hover {
-  color: #0056b3;             // brighter deep blue
-  font-weight: 600;           // optional bold on hover
+  color: #0056b3;              /* brighter deep blue */
+  font-weight: 600;            /* subtle emphasis on hover */
 }
-
-a:visited {
-  color: #4B0082;             // indigo for visited links
-}
+a:visited { color: #4B0082; }  /* indigo for visited links */
