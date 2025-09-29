@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -10,7 +9,7 @@ redirect_from:
 Welcome!
 ========
 
-I am **Ibrahim Boyenle**, a Ph.D. candidate in Biochemistry at the [**University of Maryland, Department of Chemistry & Biochemistry**](https://chem.umd.edu){:target="_blank" rel="noopener"} & the [**Institute for Bioscience and Biotechnology Research (IBBR)**](https://www.ibbr.umd.edu/){:target="_blank" rel="noopener"}.  
+I am currently a Ph.D. candidate in Biochemistry at the [**University of Maryland, Department of Chemistry & Biochemistry**](https://chem.umd.edu){:target="_blank" rel="noopener"} & the [**Institute for Bioscience and Biotechnology Research (IBBR)**](https://www.ibbr.umd.edu/){:target="_blank" rel="noopener"}.  
 My research focuses on understanding how co-chaperones regulate the conformational cycle of the **Hsp90 molecular chaperone**, combining **experimental biochemistry**, **structural biology**, & **molecular dynamics simulations**.
 
 I am particularly interested in:
