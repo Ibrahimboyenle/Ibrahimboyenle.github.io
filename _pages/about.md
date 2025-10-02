@@ -40,7 +40,7 @@ I am particularly interested in:
         </a>
       </h3>
       <p><em>Methods &amp; Protocols</em>, 2025</p>
-      <p>First biochemical study of the cyanobacterial HtpG homolog, a heat-shock protein from <i>Synechococcus elongatus</i>.</p>
+      <p>Biochemical study of the cyanobacterial HtpG homolog, a heat-shock protein 90 (Hsp90) from <i>Synechococcus elongatus</i>.</p>
     </div>
   </div>
 
