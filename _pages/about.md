@@ -47,7 +47,7 @@ I am particularly interested in:
   <!-- Second Publication -->
   <div class="pub-card">
     <a href="https://doi.org/10.1016/j.mito.2022.01.006" target="_blank" rel="noopener">
-      <img src="/images/publications/mptp-review-fig.png" alt="mPTP review figure" loading="lazy">
+      <img src="/images/publications/MPTP-2022-fig.jpg" alt="mPTP review figure" loading="lazy">
     </a>
     <div class="pub-info">
       <h3>
