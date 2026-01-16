@@ -6,13 +6,13 @@ author_profile: true
 Welcome!
 ========
 
-I am currently a Ph.D. candidate in Biochemistry at the [**University of Maryland, Department of Chemistry & Biochemistry**](https://chem.umd.edu){:target="_blank" rel="noopener"} & the [**Institute for Bioscience and Biotechnology Research (IBBR)**](https://www.ibbr.umd.edu/){:target="_blank" rel="noopener"}.  
-My research focuses on understanding how co-chaperones regulate the conformational cycle of the **Hsp90 molecular chaperone**, combining **experimental biochemistry**, **structural biology**, & **molecular dynamics simulations**.
+Ibrahim Boyenle is a Ph.D. candidate in Biochemistry at the **University of Maryland, Department of Chemistry & Biochemistry**, and the **Institute for Bioscience and Biotechnology Research (IBBR)**. He conducts his doctoral research under the supervision of **Dr. Yanxin Liu**, where his work focuses on elucidating the molecular mechanisms by which co-chaperones regulate the conformational cycle and ATPase activity of the **Hsp90 molecular chaperone**.
 
-I am particularly interested in:
-- The structural and functional roles of CS-containing co-chaperones.  
-- How co-chaperone interactions modulate Hsp90’s ATPase activity and conformational cycle.  
-- Using integrative approaches (biochemical assays, MD simulations, CryoEM, and structural modeling) to uncover mechanisms of chaperone regulation.
+His research integrates **experimental biochemistry**, **structural biology**, and **molecular dynamics simulations** to understand how co-chaperone binding events influence Hsp90 structure, dynamics, and function. In particular, he is interested in how CS-containing co-chaperones modulate Hsp90’s ATP-driven conformational transitions and how these interactions reshape the chaperone’s functional cycle. Through an integrative approach that combines biochemical assays, atomistic simulations, cryo-electron microscopy, and structural modeling, his work aims to uncover mechanistic principles governing chaperone regulation at the molecular level.
+
+Prior to his doctoral training, Ibrahim earned his **Bachelor’s degree from [Ladoke Akintola University of Technology](https://www.lautech.edu.ng/), Oyo State, Nigeria**. During his undergraduate research, he worked with **Prof. Adeola Ehigie** on the modulation of the **mitochondrial permeability transition pore (mPTP)** using medicinal plant extracts, a project that led to publications in peer-reviewed journals. This work sparked his interest in mitochondrial biology, bioenergetics, and mechanisms of cellular stress and death.
+
+In parallel, he trained under **Dr. Temitope Adelusi**, where he developed a strong foundation in **molecular dynamics simulations and structure-based computational methods**. Through this work, he applied in silico approaches to investigate protein–ligand interactions and identify potential inhibitors across multiple biological targets, contributing to several high-impact publications. These early experiences shaped his current research philosophy, which emphasizes the integration of computation and experiment to address complex biological problems.
 
 ---
 
