@@ -6,7 +6,7 @@ author_profile: true
 Welcome!
 ========
 
-Ibrahim Boyenle is a Ph.D. candidate in Biochemistry at the **University of Maryland, Department of Chemistry & Biochemistry**, and the **Institute for Bioscience and Biotechnology Research (IBBR)**. He conducts his doctoral research under the supervision of **Dr. Yanxin Liu**, where his work focuses on elucidating the molecular mechanisms by which co-chaperones regulate the conformational cycle and ATPase activity of the **Hsp90 molecular chaperone**.
+Ibrahim Boyenle is a Ph.D. candidate in Biochemistry at the **[University of Maryland, Department of Chemistry & Biochemistry](https://chem.umd.edu)** and the **[Institute for Bioscience and Biotechnology Research (IBBR)](https://www.ibbr.umd.edu/)**. He conducts his doctoral research under the supervision of **Dr. Yanxin Liu**, where his work focuses on elucidating the molecular mechanisms by which co-chaperones regulate the conformational cycle and ATPase activity of the **Hsp90 molecular chaperone**.
 
 His research integrates **experimental biochemistry**, **structural biology**, and **molecular dynamics simulations** to understand how co-chaperone binding events influence Hsp90 structure, dynamics, and function. In particular, he is interested in how CS-containing co-chaperones modulate Hsp90’s ATP-driven conformational transitions and how these interactions reshape the chaperone’s functional cycle. Through an integrative approach that combines biochemical assays, atomistic simulations, cryo-electron microscopy, and structural modeling, his work aims to uncover mechanistic principles governing chaperone regulation at the molecular level.
 
