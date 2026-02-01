@@ -16,7 +16,8 @@ In parallel, he trained under Dr. Temitope Adelusi, where he developed a strong 
 
 ---
 
-### Academic Highlights 
+### Academic Highlights
+- 🏅 ACS Seed Mentor Waiver, Fall, 2025
 - 🏅 Oral Presentation Award, NOBCChE NE/SE Conference, 2025  
 - 🏅 G. Forrest Wood Fellowship, Department of Biochemistry, University of Maryland, 2025  
 - 🏅 Goldhaber Travel Award, Department of Biochemistry, University of Maryland, 2025
