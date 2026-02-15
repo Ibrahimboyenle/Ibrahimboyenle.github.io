@@ -22,6 +22,12 @@ Awards & Fellowships
 * First runner-up, Department of Biochemistry graduating set 2021, LAUTECH  
 * ACS Fall 2025 (SEED Mentor Waiver)
 
+Membership 
+======
+* National Organization for the Professional Advancement of Black Chemists and Chemical Engineers (NOBCChE)
+* American Chemical Society (ACS)
+* American Society for Biochemistry and Molecular Biology (ASBMB)
+
 Service and leadership
 ======
 * Vice President, NOBCChE (UMD Chapter), 2025/2026
