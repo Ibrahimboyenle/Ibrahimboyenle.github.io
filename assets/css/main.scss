@@ -136,3 +136,10 @@ a:visited { color: #4B0082; }  /* indigo for visited links */
   text-align: justify;
   text-justify: inter-word;
 }
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4 {
+  text-align: left;
+}
