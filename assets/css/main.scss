@@ -151,12 +151,3 @@ a:visited { color: #4B0082; }  /* indigo for visited links */
 .archive__item h3 {
   text-align: left;
 }
-
-@media (max-width: 640px) {
-  .page__content,
-  .archive,
-  .archive__item,
-  .initial-content {
-    text-align: left;
-  }
-}
