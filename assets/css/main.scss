@@ -92,3 +92,24 @@ a:hover {
   font-weight: 600;            /* subtle emphasis on hover */
 }
 a:visited { color: #4B0082; }  /* indigo for visited links */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.metric {
+  text-align: center;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.metric strong {
+  font-size: 2.2rem;
+  font-weight: 700;
+  display: block;
+}
