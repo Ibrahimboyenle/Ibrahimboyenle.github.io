@@ -118,23 +118,35 @@ In parallel, he trained under Dr. Temitope Adelusi, where he developed a strong 
 <p><a class="btn btn--primary" href="{{ '/talks/' | relative_url }}">View all talks →</a></p>
 
 ---
-## Research Impact
+<section id="research-impact" class="impact-section">
 
-<div class="metrics">
+  <h2>Research Impact</h2>
 
-<div class="metric">
-<strong>25+</strong><br/>
-Peer-reviewed publications
-</div>
+  <div class="impact-grid">
 
-<div class="metric">
-<strong>800+</strong><br/>
-Citations
-</div>
+    <div class="impact-card">
+      <div class="impact-icon">📄</div>
+      <div class="impact-number" data-target="25+">0</div>
+      <div class="impact-label">Publications</div>
+    </div>
 
-<div class="metric">
-<strong>4</strong><br/>
-Conference presentations
-</div>
+    <div class="impact-card">
+      <div class="impact-icon">📈</div>
+      <div class="impact-number" data-target="800+">0</div>
+      <div class="impact-label">Citations</div>
+    </div>
 
-</div>
+    <div class="impact-card">
+      <div class="impact-icon">🎤</div>
+      <div class="impact-number" data-target="5+">0</div>
+      <div class="impact-label">Conference Presentations</div>
+    </div>
+
+    <div class="impact-card">
+      <div class="impact-icon">🏆</div>
+      <div class="impact-number" data-target="3">0</div>
+      <div class="impact-label">In The Media</div>
+    </div>
+
+  </div>
+</section>
