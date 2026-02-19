@@ -130,3 +130,9 @@ a:visited { color: #4B0082; }  /* indigo for visited links */
   font-size: 0.95rem;
   color: #444;
 }
+
+/* Justify main content text without affecting sidebar */
+.page__content {
+  text-align: justify;
+  text-justify: inter-word;
+}
