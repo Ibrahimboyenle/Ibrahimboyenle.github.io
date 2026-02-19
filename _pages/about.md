@@ -116,3 +116,25 @@ In parallel, he trained under Dr. Temitope Adelusi, where he developed a strong 
 {% endfor %}
 
 <p><a class="btn btn--primary" href="{{ '/talks/' | relative_url }}">View all talks →</a></p>
+
+---
+## Research Impact
+
+<div class="metrics">
+
+<div class="metric">
+<strong>25+</strong><br/>
+Peer-reviewed publications
+</div>
+
+<div class="metric">
+<strong>800+</strong><br/>
+Citations
+</div>
+
+<div class="metric">
+<strong>4</strong><br/>
+Conference presentations
+</div>
+
+</div>
