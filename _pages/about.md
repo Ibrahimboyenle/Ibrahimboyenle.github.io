@@ -126,26 +126,26 @@ In parallel, he trained under Dr. Temitope Adelusi, where he developed a strong 
 
     <div class="impact-card">
       <div class="impact-icon">📄</div>
-      <div class="impact-number" data-target="25+">0</div>
+      <div class="impact-number" data-target="25">0</div>
       <div class="impact-label">Publications</div>
     </div>
 
     <div class="impact-card">
       <div class="impact-icon">📈</div>
-      <div class="impact-number" data-target="800+">0</div>
+      <div class="impact-number" data-target="800">0</div>
       <div class="impact-label">Citations</div>
     </div>
 
     <div class="impact-card">
       <div class="impact-icon">🎤</div>
-      <div class="impact-number" data-target="5+">0</div>
+      <div class="impact-number" data-target="5">0</div>
       <div class="impact-label">Conference Presentations</div>
     </div>
 
     <div class="impact-card">
-      <div class="impact-icon">🏆</div>
+      <div class="impact-icon">📰</div>
       <div class="impact-number" data-target="3">0</div>
-      <div class="impact-label">In The Media</div>
+      <div class="impact-label">Media Coverage</div>
     </div>
 
   </div>
