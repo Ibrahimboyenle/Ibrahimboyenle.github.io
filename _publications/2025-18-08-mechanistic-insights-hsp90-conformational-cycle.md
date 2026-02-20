@@ -2,7 +2,7 @@
 title: "Mechanistic insights into the Hsp90 conformational cycle through structure-based modeling"
 collection: publications
 category: conferences
-permalink: /publication/2025-xx-mechanistic-insights-hsp90-conformational-cycle
+permalink: /publication/2025-18-08-mechanistic-insights-hsp90-conformational-cycle
 excerpt: "Conference presentation on mechanistic insights into the Hsp90 conformational cycle using structure-based modeling methods."
 date: 2025-18-08
 year: 2025
