@@ -8,5 +8,5 @@ date: 2025-08-18
 year: 2025
 venue: "American Chemical Society Conference"
 paperurl: "https://acs.digitellinc.com/p/s/mechanistic-insights-into-the-hsp90-conformational-cycle-through-structure-based-modeling-poster-board-234-634086"
-citation: "Holly Hemesath, <b>Ibrahim D. Boyenle</b>, Qiushi Ye, Yanxin Liu. (2025). Mechanistic insights into the Hsp90 conformational cycle through structure-based modeling. <i>American Chemical Society Conference</i>."
+citation: "Holly Hemesath, <b>Boyenle I.D</b>, Qiushi Ye, Yanxin Liu. (2025). Mechanistic insights into the Hsp90 conformational cycle through structure-based modeling. <i>American Chemical Society Conference</i>."
 ---
