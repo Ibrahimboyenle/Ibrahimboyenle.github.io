@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2025-18-08-mechanistic-insights-hsp90-conformational-cycle
 excerpt: "Conference presentation on mechanistic insights into the Hsp90 conformational cycle using structure-based modeling methods."
-date: 2025-18-08
+date: 2025-08-18
 year: 2025
 venue: "American Chemical Society Conference"
 paperurl: "https://acs.digitellinc.com/p/s/mechanistic-insights-into-the-hsp90-conformational-cycle-through-structure-based-modeling-poster-board-234-634086"
